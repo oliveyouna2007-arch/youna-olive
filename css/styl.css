@@ -1,0 +1,143 @@
+:root {
+  --bg: #f5f1eb;
+  --card: #ffffff;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --accent: #cd3a69;
+  --accent-soft: #dde6f3;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, var(--bg), #efe4d8);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.hero {
+  background: var(--card);
+  border-radius: 24px;
+  padding: 40px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 32px;
+  align-items: center;
+}
+
+.eyebrow {
+  display: inline-block;
+  padding: 8px 12px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 12px;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0 0 12px;
+}
+
+h1 {
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.tagline {
+  font-size: 1.05rem;
+  color: var(--muted);
+  margin-bottom: 20px;
+}
+
+.contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 24px;
+  color: var(--text);
+}
+
+.contact-list span {
+  font-weight: 500;
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  padding: 12px 18px;
+  border-radius: 999px;
+  background: var(--accent);
+  color: white;
+  font-weight: 600;
+  transition: transform 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.hero img {
+  width: 100%;
+  border-radius: 24px;
+  object-fit: cover;
+  height: 360px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+section {
+  margin-top: 24px;
+  background: var(--card);
+  border-radius: 24px;
+  padding: 32px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.card {
+  background: var(--accent-soft);
+  padding: 20px;
+  border-radius: 16px;
+}
+
+.card h3 {
+  color: var(--accent);
+}
+
+.education-list {
+  display: grid;
+  gap: 12px;
+}
+
+.education-item {
+  border-left: 4px solid var(--accent);
+  padding-left: 12px;
+}
+
+@media (max-width: 800px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
